@@ -1,1 +1,50 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  font-size: 2em;
+  width: 150px;
+  height: 200px;
+}
+
+.corazones::before {
+  content: "♥";
+  color: red;
+}
+
+.diamantes::before {
+  content: "♦";
+  color: red;
+}
+
+.picas::before {
+  content: "♠";
+  color: black;
+}
+
+.treboles::before {
+  content: "♣";
+  color: black;
+}
