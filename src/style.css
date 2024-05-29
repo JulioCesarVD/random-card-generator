@@ -27,24 +27,48 @@ body {
   font-size: 2em;
   width: 150px;
   height: 200px;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.corazones::before {
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  font-size: 1.5em;
+}
+
+.card.corazones::before,
+.card.corazones::after {
   content: "♥";
   color: red;
 }
 
-.diamantes::before {
+.card.diamantes::before,
+.card.diamantes::after {
   content: "♦";
   color: red;
 }
 
-.picas::before {
+.card.picas::before,
+.card.picas::after {
   content: "♠";
   color: black;
 }
 
-.treboles::before {
+.card.treboles::before,
+.card.treboles::after {
   content: "♣";
   color: black;
+}
+
+.card::before {
+  top: 0px;
+  left: 10px;
+}
+
+.card::after {
+  bottom: 0px;
+  right: 10px;
+  transform: rotate(180deg);
 }
