@@ -5,13 +5,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f8f9fa;
+  background-image: url("https://images.pexels.com/photos/2224832/pexels-photo-2224832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .card-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .card {
@@ -29,6 +35,7 @@ body {
   height: 200px;
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .card::before,
@@ -71,4 +78,14 @@ body {
   bottom: 0px;
   right: 10px;
   transform: rotate(180deg);
+}
+
+.blur-background {
+  filter: blur(10px);
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.432);
+  border-radius: 50px;
+  font-weight: bolder;
 }
