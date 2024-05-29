@@ -25,9 +25,9 @@ function obtenerValor() {
     "8",
     "9",
     "10",
-    "Rey",
-    "Reina",
-    "Jota",
+    'K <br><i class="fas fa-chess-king"></i>',
+    'Q <br><i class="fas fa-chess-queen"></i>',
+    'J <br><i class="fas fa-chess-knight"></i>',
     "As"
   ];
   return valores[obtenerNumeroAleatorio(0, valores.length - 1)];
@@ -38,7 +38,7 @@ function generarCarta() {
   const valor = obtenerValor();
   const carta = document.getElementById("carta");
   carta.className = `card ${palo}`;
-  carta.textContent = `${valor}`;
+  carta.innerHTML = `${valor}`;
   const ancho = document.getElementById("ancho").value;
   const alto = document.getElementById("alto").value;
   carta.style.width = ancho ? ancho + "px" : "150px";
